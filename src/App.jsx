@@ -4,12 +4,7 @@ import { AboutMe } from './components/AboutMe'
 import { Education } from './components/Education'
 import { Proyect } from './components/Proyect'
 import { Contact } from './components/Contact'
-
-import {
-  RiCakeLine, RiComputerLine, RiDownloadLine, RiGithubLine, RiGlobalLine,
-  RiGraduationCapLine, RiLinkedinFill, RiMailAiLine, RiMailLine, RiMapPinLine,
-  RiPhoneLine, RiUser6Line, RiWhatsappLine
-} from '@remixicon/react'
+import { RiComputerLine, RiDownloadLine, RiGithubLine, RiGlobalLine, RiGraduationCapLine, RiLinkedinFill, RiMailAiLine, RiMailLine, RiMapPinLine, RiPhoneLine, RiUser6Line, RiWhatsappLine} from '@remixicon/react'
 
 export const App = () => {
   const copiarTexto = (texto) => {
@@ -25,7 +20,6 @@ export const App = () => {
   return (
     <BrowserRouter>
       <div className='flex p-7 gap-5 bg-gradient-to-tr from-pink-100 via-purple-100 to-blue-100 h-screen justify-center items-center max-sm:grid max-sm:h-full max-sm:p-2 max-sm:gap-2'>
-        {/* LADO IZQUIERDO */}
         <div className='w-3/12 max-sm:w-full max-sm:p-2'>
           <div className='z-40 bg-violet-500 shadow-md rounded-lg p-5 mb-5 w-64 h-64 justify-self-center max-sm:w-32 max-sm:h-32'></div>
 
@@ -81,14 +75,13 @@ export const App = () => {
               </div>
             </div>
 
-            <button className='flex gap-2 w-1/2 bg-sky-500 text-white shadow-md rounded-lg p-2 content-center justify-self-center hover:bg-sky-700 transition-colors duration-300 animate-bounce max-sm:flex max-sm:w-3/4'>
+            <button href="" className='flex gap-2 w-1/2 bg-sky-500 text-white shadow-md rounded-lg p-2 content-center justify-self-center hover:bg-sky-700 transition-colors duration-300 animate-bounce max-sm:flex max-sm:w-3/4'>
               <RiDownloadLine />
               Download CV
             </button>
           </div>
         </div>
 
-        {/* SECCIÓN DE CONTENIDO CAMBIANTE */}
         <section className='bg-white shadow-md rounded-lg p-7 w-3/6 h-4/5 max-sm:w-full max-sm:h-96 max-sm:p-4 overflow-y-auto'>
           <Routes>
             <Route path="/MySite/" element={<AboutMe />} />
@@ -98,7 +91,6 @@ export const App = () => {
           </Routes>
         </section>
 
-        {/* NAVEGACIÓN */}
         <nav className='bg-white shadow-md rounded-lg p-5 w-1/12 backdrop-blur-sm max-sm:w-full max-sm:bg-white/50 max-sm:backdrop-blur-xs max-sm:inline-block bottom-0 left-0'>
           <div className='grid gap-5 max-sm:grid-cols-4 max-sm:gap-2 max-sm:text-sm'>
             <Link to="/MySite/" className='place-items-center grid gap-2 items-center hover:bg-violet-200 p-2 rounded-lg transition-colors duration-300'>
