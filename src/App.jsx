@@ -5,6 +5,7 @@ import { Education } from './components/Education'
 import { Proyect } from './components/Proyect'
 import { Contact } from './components/Contact'
 import { RiComputerLine, RiDownloadLine, RiGithubLine, RiGlobalLine, RiGraduationCapLine, RiLinkedinFill, RiMailAiLine, RiMailLine, RiMapPinLine, RiPhoneLine, RiUser6Line, RiWhatsappLine} from '@remixicon/react'
+import Cv from '/CV.pdf'; 
 
 export const App = () => {
   const copiarTexto = (texto) => {
@@ -21,7 +22,9 @@ export const App = () => {
     <BrowserRouter>
       <div className='flex p-7 gap-5 bg-gradient-to-tr from-pink-100 via-purple-100 to-blue-100 h-screen justify-center items-center max-sm:grid max-sm:h-full max-sm:p-2 max-sm:gap-2'>
         <div className='w-3/12 max-sm:w-full max-sm:p-2'>
-          <div className='z-40 bg-violet-500 shadow-md rounded-lg p-5 mb-5 w-64 h-64 justify-self-center max-sm:w-32 max-sm:h-32'></div>
+          <div className='z-40 bg-violet-500 shadow-md rounded-lg p-5 mb-5 w-64 h-64 justify-self-center max-sm:w-32 max-sm:h-32'>
+            <img src="" alt="" />
+          </div>
 
           <div className='z-50 grid backdrop-blur-sm bg-white shadow-md rounded-lg p-5 gap-3 max-sm:w-full'>
             <h2 className='text-xl text-center'>Ana Lucía Rmz. San Juan</h2>
@@ -75,10 +78,10 @@ export const App = () => {
               </div>
             </div>
 
-            <button href="" className='flex gap-2 w-1/2 bg-sky-500 text-white shadow-md rounded-lg p-2 content-center justify-self-center hover:bg-sky-700 transition-colors duration-300 animate-bounce max-sm:flex max-sm:w-3/4'>
+            <a href={Cv} download={Cv} className='flex gap-2 w-1/2 bg-sky-500 text-white shadow-md rounded-lg p-2 content-center justify-self-center hover:bg-sky-700 transition-colors duration-300 animate-bounce max-sm:flex max-sm:w-3/4'>
               <RiDownloadLine />
               Download CV
-            </button>
+            </a>
           </div>
         </div>
 
